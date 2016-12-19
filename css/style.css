@@ -302,10 +302,11 @@ h1 {
 }
 
 .row h2 {
-  margin-left: -8%;
+margin-left: -8%;
 font-size: 170%;
 color:darkblue;
-max-width: 135%;
+max-width: 505%;
+
 }
 
  p {
@@ -437,10 +438,7 @@ position: absolute;
 
 }
 
-#section1 {
-  max-width: 500%;
-  display: inline;
-}
+
 
 #pieBarText {
 
