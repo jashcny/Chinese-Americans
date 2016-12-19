@@ -430,8 +430,10 @@ position: absolute;
 
 
 #barChart{
- padding-left: 55%;
+ margin-left: 78%;
   margin-top: 2.2%;
+  display: inline-block;
+  position: relative;
 
 }
 
