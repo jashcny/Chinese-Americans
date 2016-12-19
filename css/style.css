@@ -409,8 +409,9 @@ position: absolute;
 }*/
 
 .pieLegend{
-  margin-left: -42%;
-  padding-top: 5%;
+  margin-left: 0%;
+  margin-top: -14%;
+  display: block;
 }
 
 #pie{
@@ -428,7 +429,8 @@ position: absolute;
 
 #barChart{
  padding-left: 46%;
-  margin-top: -40.2%;
+  margin-top: -44.2%;
+
 }
 
 
