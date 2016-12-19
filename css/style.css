@@ -431,7 +431,7 @@ position: absolute;
 
 #barChart{
  margin-left: 78%;
-  margin-top: 2.2%;
+  margin-top: 2.8%;
   display: inline-block;
   position: relative;
 
@@ -1106,7 +1106,7 @@ margin-top: 50px;
 }
 
 #pieSource{
-  margin-left: 1%;
+  margin-left: -8%;
   margin-top: 4%;
 }
 
