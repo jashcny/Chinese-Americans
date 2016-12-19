@@ -302,10 +302,10 @@ h1 {
 }
 
 .row h2 {
-margin-left: -8%;
+margin-left: -10%;
 font-size: 170%;
 color:darkblue;
-max-width: 505%;
+max-width: 1500px;
 
 }
 
@@ -315,13 +315,14 @@ max-width: 505%;
   line-height: 2;
   color:black;
   max-width: 250%;
-  margin-left: -8%;
+  margin-left: -10%;
   text-align: justify;
 }
 
 
 section {
   margin-bottom: 12%;
+
 }
 .mouse {
   display: block;
@@ -674,7 +675,7 @@ width: 600px;
   display: inline-block;
   width:1200px;
   margin-top: 5%;
-  margin-left: -15%;
+  margin-left: -17%;
 }
 
 .chart {
@@ -692,7 +693,7 @@ width: 600px;
 }
 
 #multipleSource{
-  margin-left: -11%;
+  margin-left: -13%;
 }
 
 #button-wrap {
@@ -780,7 +781,7 @@ margin-left: 10%;
 
 
 #table1 {
-  margin-left: -8%;
+  margin-left: -10%;
   margin-top: 40px;
 }
 
@@ -1108,7 +1109,7 @@ margin-top: 50px;
 }
 
 #pieSource{
-  margin-left: -8%;
+  margin-left: -10%;
   margin-top: 4%;
 }
 

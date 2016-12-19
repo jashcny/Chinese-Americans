@@ -1,12 +1,12 @@
 function smallMultiples(rawData){
 
-var fullwidth = 164,
+var fullwidth = 170,
   fullheight = 170,
   margin = {
     top: 15,
-    right: 15,
+    right: 25,
     bottom: 50,
-    left: 45
+    left: 49
   };
 
 var Percentage= "Percentage";
