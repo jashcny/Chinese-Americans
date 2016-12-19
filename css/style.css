@@ -437,6 +437,9 @@ position: absolute;
 
 }
 
+#section1 {
+  max-width: 200%;
+}
 
 #pieBarText {
 
