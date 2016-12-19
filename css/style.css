@@ -403,11 +403,6 @@ position: absolute;
   margin-left: 1%;
 }
 
-#barChart{
- padding-left: 46%;
-  margin-top: -37%;
-}
-
 /*.barsvg {
   padding-left: 50%;
   padding-bottom: 10px;
@@ -420,7 +415,6 @@ position: absolute;
 
 #pie{
   margin-top: 1%;
-
 }
 
 #pieBar  {
@@ -430,6 +424,13 @@ position: absolute;
   margin-left: -10%;
 
 }
+
+
+#barChart{
+ padding-left: 46%;
+  margin-top: -37.1%;
+}
+
 
 #pieBarText {
 
