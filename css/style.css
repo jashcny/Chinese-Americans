@@ -1,11 +1,21 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto|Slabo+27px');
+#videoHeader {
+  margin-left: 2%;
+  font-weight: bold;
+  font-size: 220%;
+  font-family: 'Slabo 27px', serif;
+}
+/*#sectionOne {
+
+  border:1px solid black;
+}*/
 
 .video-container {
   position: relative;
   padding-bottom: 56.25%;
   padding-top: 30px;
   height: 0;
-
+margin-left: 2%;
   overflow: hidden;
 }
 
@@ -15,8 +25,9 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 98%;
+  height: 98%;
+
 }
 
 /*Video finished
@@ -294,7 +305,7 @@ h1 {
   margin-left: -8%;
 font-size: 170%;
 color:darkblue;
-max-width: 105%;
+max-width: 135%;
 }
 
  p {
@@ -319,7 +330,7 @@ section {
   border-radius: 13px;
   border: 2px solid red;
   position: absolute;
-  margin-top: -20px;
+  margin-top: -30px;
   position: absolute;
   left: 50%;
   margin-left: -26px;
@@ -393,8 +404,8 @@ position: absolute;
 }
 
 #barChart{
-  margin-left: 40%;
-  margin-top: -47%;
+  margin-left: 37%;
+  margin-top: -40%;
 }
 
 .barsvg {
@@ -403,12 +414,12 @@ position: absolute;
 }
 
 .pieLegend{
-  margin-left: -35%;
-  padding-top: 6%;
+  margin-left: -46%;
+  padding-top: 5%;
 }
 
 #pie{
-  margin-top: 7%;
+  margin-top: 1%;
 
 }
 
@@ -416,7 +427,6 @@ position: absolute;
   display: inline-block;
   margin-top: -1%;
   padding-left: 2%;
-
   margin-left: -10%;
 
 }
@@ -641,8 +651,10 @@ width: 600px;
 
 
 /*small Multiples*/
+
+
 #main {
-  min-width: 1500px;
+
   margin-left: 4%;
   margin-top: -9%;
 
@@ -653,7 +665,7 @@ width: 600px;
   display: inline-block;
   width:1200px;
   margin-top: 5%;
-  margin-left: -11%;
+  margin-left: -15%;
 }
 
 .chart {
@@ -671,13 +683,13 @@ width: 600px;
 }
 
 #multipleSource{
-  margin-left: -7%;
+  margin-left: -11%;
 }
 
 #button-wrap {
-  width: 20%;
-  height: 5%;
-  padding-top: -10%;
+  min-width: 20%;
+  height: 4%;
+  padding-top:15%;
   margin-left: 19%;
   margin-right: auto;
   margin-bottom: 10%;
@@ -831,7 +843,8 @@ display: block;
 width: 150px;
 height: 150px;
 margin-left: 24%;
-margin-bottom: 2%;
+margin-bottom: 5%;
+margin-right: 2%;
 background-size:100%;
 }
 
@@ -878,14 +891,22 @@ display: inline-block;
 
 }
 
-.visaTextGroup p{
-    margin-top: -11%;
-    max-height: 5%;
-    line-height: 1.5;
-    float:right;
-    max-width: 120%;
-    min-width: 1%;
-    padding-left: 45%;
+#visa1,#visa2,#visa3,#visa4,#visa5,#visa6,#visa7,#visa8{
+  display: inline-block;
+}
+
+#head1 {
+  margin-top: -1%;
+  font-weight: bold;
+}
+
+#moneytext{
+  margin-top: -1.5%;
+}
+
+#head2 {
+  margin-top: 1.5%;
+  font-weight: bold;
 }
 
 .visaTextGroup a{
@@ -894,32 +915,64 @@ float:left;
 }
 
 
-/*#marriagetext{
-  padding-top: 8%;
+#marriagetext{
+margin-top: -1.5%;
+
+}
+
+#head3 {
+  margin-top: -1.2%;
+  font-weight: bold;
 }
 
 #studytext{
-  padding-top: 11%;
+margin-top: -1.2%;
 }
-#internationtext{
-padding-top: 11%;
+
+#head4 {
+  font-weight: bold;
+  margin-top: .5%;
 }
 
 #talenttext{
-  padding-top: 8%;
+  margin-top: -1.5%;
+}
+
+#head5 {
+  font-weight: bold;
+  margin-top: -1%;
 }
 
 #passporttext{
-  padding-top: 8%;
+  margin-top: -1.5%;
+}
+
+#head6 {
+  font-weight: bold;
+  margin-top: 0.5%;
 }
 
 #babytext  {
-  padding-top: 7.5%;
+  margin-top: -1%;
+}
+
+#head7 {
+font-weight: bold;
+margin-top: 1.5%;
+}
+
+#internationtext{
+margin-top: -1%;
+}
+
+#head8 {
+font-weight: bold;
+margin-top: 0.5%;
 }
 
 #asylumtext {
-  padding-top: 10%;
-}*/
+  margin-top: -1.5%;
+}
 
 /*#marriageGroup,#studyGroup,#talentGroup,#internationGroup,#passportGroup,#asylumGroup,#babyGroup {
   display: inline-block;
@@ -1012,15 +1065,17 @@ margin-top: 50px;
   stroke-opacity: .9;
 }
 #send {
-  margin-bottom: 80px;
+  margin-bottom: 90px;
 }
 #textgroup{
   display: inline-block;
 }
 
 #received{
+  margin-top: -10%;
+  margin-bottom: 10%;
   min-width: 1370px;
-  padding-left: 720px;
+  padding-left: 83%;
 }
 
 #SankeyRemittance{

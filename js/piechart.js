@@ -1,5 +1,5 @@
 function piechart(data) {
-var m = 20,
+var m = 25,
     r = 100;
 
 var color = d3.scale.ordinal()
@@ -18,8 +18,8 @@ var arc = d3.svg.arc()
     .outerRadius(r);
 
 var labelArc = d3.svg.arc()
-    .outerRadius(r+10)
-    .innerRadius(r+10);
+    .outerRadius(r+5)
+    .innerRadius(r+5);
 
 
 
@@ -27,7 +27,7 @@ var labelArc = d3.svg.arc()
   // child g element translates the origin to the pie center.
   var svg = d3.select("#pie")
       .append("svg")
-      .attr("width", (r + m) * 2.5)
+      .attr("width", (r + m) * 3.5)
       .attr("height", (r + m) * 3.1)
       .append("g")
       .attr("transform", "translate(" + (r + m) + "," + (r + m) + ")");
@@ -53,9 +53,10 @@ var g = svg.selectAll(".arc")
         .attr("transform", function(d) { return "translate(" + labelArc.centroid(d) + ")"; })
         .attr("dy", ".35em")
         .attr("font-size",20)
+        .style("text-anchor","middle")
         .text(function(d) { return d.data.number+"%"; });
 
-var degreeType = ["No More than High school","PHD","M.A.","B.A."];
+var degreeType = ["No More than High school","Doctor Degree","Master Degree","Bachelor Degree"];
 
 var degreeType_reversed = degreeType.slice().reverse();
 
@@ -67,7 +68,7 @@ var legend = d3.select("#pie").append("svg")
                .data(degreeType_reversed)
                .enter().append("g")
                .attr("transform", function(d,i) {
-               xOff = (i % 2) * 100
+               xOff = (i % 2) * 150
                yOff = Math.floor(i  / 2) * 41
                return "translate(" + xOff + "," + yOff + ")"});
 

@@ -67,22 +67,21 @@ function barChart(data){
             .attr("class", "label")
             .attr("x", -3)
             .attr("y", yScale.rangeBand()/3)
-
             .attr("dy", "0.08em")
             .attr("text-anchor", "end")
             .text(function(d) { return d.reason; });
 
 
-        barCreate.append("text")
-            .attr("class", "value")
-            .attr("x", function(d) {
-     						return xScale(+d.number);
-            })
-            .attr("y", yScale.rangeBand() / 3)
-            .attr("dx",".45em")
-            .attr("dy", ".2em")
-            .attr("text-anchor", "front")
-            .text(function(d) { return formatPercent(d.number); });
+        // barCreate.append("text")
+        //     .attr("class", "value")
+        //     .attr("x", function(d) {
+     	// 					return xScale(+d.number);
+        //     })
+        //     .attr("y", yScale.rangeBand() / 3)
+        //     .attr("dx",".45em")
+        //     .attr("dy", ".2em")
+        //     .attr("text-anchor", "front")
+        //     .text(function(d) { return formatPercent(d.number); });
 
         function make_x_axis() {
             return d3.svg.axis()

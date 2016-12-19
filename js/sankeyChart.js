@@ -295,8 +295,8 @@ function sankeyCharts(remittanceFlow){
   };
 
 
-  var margin = {top: 10, right: 10, bottom: 10, left: 10},
-      width = 958 - margin.left - margin.right,
+  var margin = {top: 10, right: 80, bottom: 10, left: 180},
+      width = 970 - margin.left - margin.right,
       height = 440 - margin.top - margin.bottom;
 
   var numberFormat=d3.format(",");
@@ -312,7 +312,7 @@ function sankeyCharts(remittanceFlow){
   // Set the sankey diagram properties
   var sankey = d3.sankey()
       .nodeWidth(36)
-      .nodePadding(10)
+      .nodePadding(15)
       .size([width, height]);
 
   var path = sankey.link();
@@ -375,28 +375,28 @@ function sankeyCharts(remittanceFlow){
 
   // add in the title for the nodes
     node.append("text")
-        .attr("x", -6)
-        .attr("y", function(d) { return d.dy / 2; })
+        .attr("x", 40)
+        .attr("y", function(d) {return d.dy / 2; })
         .attr("dy", ".35em")
-        .attr("text-anchor", "end")
         .attr("transform", null)
         .text(function(d) { return d.name; })
         .filter(function(d) { return d.x < width / 2; })
-        .attr("x", 6 + sankey.nodeWidth())
-        .attr("text-anchor", "start");
+        .attr("x",sankey.nodeWidth()-40)
+        .attr("text-anchor", "end");
 
-        node.append("text")
-            .attr("dx", function(d){if (d.name=="China"){return "-8em";}else{return "-9em";}})
-            .attr("transform", "rotate(-90)")
-            .attr("y", function(d) { return d.dy/8 })
-            .attr("dy", ".35em")
-            .attr("text-anchor", "end")
-            .style("fill","white")
-            .text(
-            function(d){if (d.name=="China"||d.name=="United States") { return numberFormat(d.value) ; }})
-            // .filter(function(d) { return d.x < width / 2; })
-            .attr("x", 6 + sankey.nodeWidth())
-            .attr("text-anchor", "start");
+
+        // node.append("text")
+        //     .attr("dx", function(d){if (d.name=="China"){return "-8em";}else{return "-9em";}})
+        //     .attr("transform", "rotate(-90)")
+        //     .attr("y", function(d) { return d.dy/8 })
+        //     .attr("dy", ".35em")
+        //     .attr("text-anchor", "end")
+        //     .style("fill","white")
+        //     .text(
+        //     function(d){if (d.name=="China"||d.name=="United States") { return numberFormat(d.value) ; }})
+        //     // .filter(function(d) { return d.x < width / 2; })
+        //     .attr("x", 6 + sankey.nodeWidth())
+        //     .attr("text-anchor", "start");
 
 
 
@@ -454,7 +454,7 @@ function sankeyCharts(remittanceFlow){
       tooltip6
         .style("display", null) // this removes the display none setting from it
         .html("<p><strong>Region: </strong> " + d.source.name +"→"+ d.target.name +
-              "<br><strong>Remittance: </strong>" + numberFormat(d.value) + "</p>");
+              "<br><strong>Remittance: </strong>" + numberFormat(d.value) + " million dollars"+"</p>");
       }
 
     function mousemoveFunc(d) {

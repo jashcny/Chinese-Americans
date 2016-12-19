@@ -94,7 +94,7 @@ states.forEach(function(state){
       .outerTickSize([0]);
     //
       // setup y
-      var yScale = d3.scale.linear().range([height-100, 5]).domain(TotalP), // value -> display
+      var yScale = d3.scale.linear().range([height-100, 15]).domain(TotalP), // value -> display
           yAxis = d3.svg.axis()
                     .scale(yScale)
                     .orient("left")

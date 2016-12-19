@@ -13,34 +13,10 @@
     "value": 4188
   },
   {
-    "color":"#C1E1DC",
-    "source": "France",
-    "target": "China",
-    "value": 585
-  },
-  {
-    "color":"#FFCCAC",
-    "source": "Germany",
-    "target": "China",
-    "value": 647
-  },
-  {
     "color":"#EE693F",
     "source": "Hong Kong SAR, China",
     "target": "China",
     "value": 15562
-  },
-  {
-    "color":"#EAD39C",
-    "source": "Indonesia",
-    "target": "China",
-    "value": 351
-  },
-  {
-    "color":"#BC6D4F",
-    "source": "Italy",
-    "target": "China",
-    "value": 1170
   },
   {
     "color":"#52958b",
@@ -61,46 +37,10 @@
     "value": 2205
   },
   {
-    "color":"#A4CABC",
-    "source": "Malaysia",
-    "target": "China",
-    "value": 331
-  },
-  {
-    "color":"#A5C3CF",
-    "source": "Netherlands",
-    "target": "China",
-    "value": 417
-  },
-  {
-    "color":"#FFFAE1",
-    "source": "New Zealand",
-    "target": "China",
-    "value": 622
-  },
-  {
     "color":"#5CC5EF",
     "source": "Singapore",
     "target": "China",
     "value": 2785
-  },
-  {
-    "color":"#E1B16A",
-    "source": "Spain",
-    "target": "China",
-    "value": 1067
-  },
-  {
-    "color":"#FFBEBD",
-    "source": "Thailand",
-    "target": "China",
-    "value": 847
-  },
-  {
-    "color":"#5B7065",
-    "source": "United Kingdom",
-    "target": "China",
-    "value": 974
   },
   {
     "color":"#CB0000",
@@ -137,6 +77,12 @@
     "source": "United States",
     "target": "South Korea",
     "value": 2895
+  },
+  {
+    "color":"#BC6D4F",
+    "source": "Other Regions",
+    "target": "China",
+    "value": 11717
   }
 ],
 "nodes": [
@@ -161,28 +107,12 @@
     "name": "Canada"
   },
   {
-    "color":"#C1E1DC",
-    "name": "France"
-  },
-  {
-    "color":"#FFCCAC",
-    "name": "Germany"
-  },
-  {
     "color":"#EE693F",
     "name": "Hong Kong SAR, China"
   },
   {
     "color":"#EAD39C",
-    "name": "Indonesia"
-  },
-  {
-    "color":"#EAD39C",
     "name": "Philippines"
-  },
-  {
-    "color":"#BC6D4F",
-    "name": "Italy"
   },
   {
     "color":"#52958b",
@@ -197,32 +127,8 @@
     "name": "Macao SAR, China"
   },
   {
-    "color":"#A4CABC",
-    "name": "Malaysia"
-  },
-  {
-    "color":"#A5C3CF",
-    "name": "Netherlands"
-  },
-  {
-    "color":"#FFFAE1",
-    "name": "New Zealand"
-  },
-  {
     "color":"#5CC5EF",
     "name": "Singapore"
-  },
-  {
-    "color":"#E1B16A",
-    "name": "Spain"
-  },
-  {
-    "color":"#FFBEBD",
-    "name": "Thailand"
-  },
-  {
-    "color":"#5B7065",
-    "name": "United Kingdom"
   },
   {
     "color":"#CB0000",
@@ -231,5 +137,9 @@
   {
     "color":"#344D90",
     "name": "China"
+  },
+  {
+    "color":"#BC6D4F",
+    "name": "Other Regions"
   }
 ] }
