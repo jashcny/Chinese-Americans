@@ -404,17 +404,17 @@ position: absolute;
 }
 
 #barChart{
-  margin-left: 37%;
-  margin-top: -40%;
+ padding-left: 46%;
+  margin-top: -37%;
 }
 
-.barsvg {
+/*.barsvg {
   padding-left: 50%;
   padding-bottom: 10px;
-}
+}*/
 
 .pieLegend{
-  margin-left: -46%;
+  margin-left: -42%;
   padding-top: 5%;
 }
 

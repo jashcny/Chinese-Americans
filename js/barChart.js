@@ -1,9 +1,9 @@
 function barChart(data){
 
-  var fullwidth = 650,
+  var fullwidth = 820,
       fullheight = 340;
 
-   var margin = {top: 20, right:10, bottom: 1, left: 10},
+   var margin = {top: 20, right:40, bottom: 1, left: 190},
       width = fullwidth - margin.right - margin.left;
       height = fullheight - margin.top - margin.bottom;
 
