@@ -81,7 +81,6 @@ margin-left: 2%;
 
 
 
-
 /*This is the first navigation*/
 
 
@@ -161,13 +160,10 @@ nav ul {
 }
 @media only screen and (max-width: 766px) {
   nav ul {
-    padding-top: 10px;
-    margin-bottom: 22px;
-    float: left;
-    text-align: center;
-    width: 100%;
+display: none;
   }
 }
+
 nav ul li {
   display: inline-block;
   margin-left: 35px;
@@ -178,6 +174,10 @@ nav ul li {
     width: 100%;
     padding: 7px 0;
     margin: 0;
+  }
+
+  .contactHead {
+    display: none
   }
 }
 nav ul a {
@@ -194,15 +194,18 @@ nav ul a {
   right: 22px;
   top: 0;
   width: 30px;
+  right: 15%;
   -webkit-transition: all 200ms ease-in;
   -moz-transition: all 200ms ease-in;
   transition: all 200ms ease-in;
 }
+
 @media only screen and (max-width: 766px) {
   .mobile-toggle {
     display: block;
   }
 }
+
 .mobile-toggle span {
   width: 30px;
   height: 4px;
@@ -405,11 +408,20 @@ section {
   margin-left: -80px;
 }
 
+
+
+
 /*#barChart {
 margin-left: 57%;
 margin-top: -57%;
 position: absolute;
 }*/
+
+@media only screen and (max-width: 766px) {
+  #barChart {
+    margin-top: -15%;
+  }
+}
 
 #combine h2{
   margin-left: 1%;
@@ -427,8 +439,9 @@ position: absolute;
 }
 
 #buttons {
-  margin-left: 400px;
-  margin-bottom: 100px;
+  margin-left: 15%;
+  margin-bottom: 20%;
+
 }
 
 
@@ -484,6 +497,10 @@ position: absolute;
     font-weight: bold;
   }
 
+.label{
+  font-size: 65%
+}
+
 .label2,.label3 {
   font-size: 20px;
 }
@@ -500,15 +517,21 @@ position: absolute;
   }
 
 #info {
-    position: absolute;
     margin-left: 82%;
-    margin-top: 250px;
+    margin-top: -60px;
 }
 
 #info p{
   width: 200px;
-font-size: 16px;
-color:grey;
+  font-size: 16px;
+  color:grey;
+}
+
+@media only screen and (max-width: 766px) {
+  #info {
+      margin-left: 22%;
+      margin-top: -20px;
+  }
 }
 
 #CT1 {
@@ -615,6 +638,8 @@ margin-left: 600px;
 width: 600px;
 }
 
+
+
 .headPec {
   padding-top: 5%;
 }
@@ -656,7 +681,7 @@ width: 600px;
   display: inline-block;
   width:1200px;
   margin-top: 5%;
-  margin-left: -17%;
+  margin-left: -12%;
 }
 
 .chart {
@@ -678,7 +703,9 @@ width: 600px;
 #button-wrap {
   min-width: 20%;
   height: 4%;
-  /*padding-top:13%;*/
+  margin-left: 19%;
+  padding-top:3%;
+  margin-top: 2%;
   /*margin-left: 19%;
   margin-right: auto;
   margin-bottom: 10%;*/
@@ -740,7 +767,7 @@ width: 600px;
 }
 
 .mulSource {
-margin-left: 2%;
+margin-left: 6%;
 margin-top: 2%;
 margin-bottom: 5%;
 }
@@ -921,6 +948,7 @@ height: 150px;
 
 .cirbar{
   margin-left: -10%;
+  margin-top: 3%;
 }
 
 .cirbar2{
@@ -933,19 +961,25 @@ height: 150px;
   margin-bottom: 7%;
 }
 
+@media only screen and (max-width: 766px) {
+  .sourcePie  {
+    margin-top: 2%;
+  }
+}
+
 .headHur {
   margin-top: 10%;
 }
 
 hr {
-  margin-top: -50px;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 
 #me {
   border-radius: 50%;
-  height: 20%;
-  width: 20%;
-  margin-top: 12%;
+  height: 50%;
+  width: 50%;
   margin-left: 16%;
 }
 
@@ -959,23 +993,14 @@ hr {
 max-width: 40%;
 }
 
-#footer{
-  display: block;
+.footer{
   margin-top: 7.5%;
   margin-left: 3%;
-
-}
-#footer p{
-  text-align: center;
-  color:black;
 }
 
-#footer a{
-  color: black;
-}
 
 .reimRow {
-  margin-left: 3%;
+  margin-left: 4%;
 }
 
 .remitSource {

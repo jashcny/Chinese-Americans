@@ -38,33 +38,34 @@
       <header class="main_h">
           <div class="row">
             <a class="logo" href="#">Chinese Americans</a>
-              <div class="mobile-toggle">
+
+              <!-- <div class="mobile-toggle"  >
                   <span></span>
                   <span></span>
                   <span></span>
-              </div>
+              </div> -->
 
               <nav>
                 <ul>
-                  <li><a href="#final">About</a></li>
-                  <li><a href="http://www.hanhuang.me">Contact</a></li>
+                  <li class="contactHead"><a href="#final">About</a></li>
+                  <li ><a href="http://www.hanhuang.me">Contact</a></li>
                 </ul>
                       <!--This is the second nav bar  -->
-                  <span id="clicker" style="font-size:30px;cursor:pointer; "  onclick="openNav()">&#9776;</span>
+                  <!-- <span id="clicker" style="font-size:30px;cursor:pointer; "  onclick="openNav()">&#9776;</span> -->
               </nav>
           </div>
       </header>
 
 
         <!-- This is the nav content  -->
-        <div id="mySidenav" class="sidenav">
+        <!-- <div id="mySidenav" class="sidenav">
           <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
           <a href="#history">History</a>
           <a href="#section1">Population</a>
           <a href="#GreenCard">Green Card</a>
           <a href="#main">EB-5 holders</a>
           <a href="#RemittanceTitle">Remittance</a>
-        </div>
+        </div> -->
         <!-- Finish nav -->
 
         <!-- This is headline -->
@@ -288,9 +289,12 @@
                     </table>
                   </div>
 
-                  <div id="buttons"></div>
-                    <div class=" col-xs-12 col-sm-12 col-md-8 col-lg-8" id="stateMap"></div>
-                      <div id="info"></div>
+                  <div class=" col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                    <div id="buttons"></div>
+                      <div id="stateMap"></div>
+                        <div id="info"></div>
+                  </div>
+
                   </div>
 
                     <p class=" col-xs-10 col-sm-10 col-md-10 col-lg-10 tableSource" >(Source: United States Census Bureau)</p>
@@ -420,7 +424,7 @@
             		      <div class="col-xs-10 col-sm-10 col-md-6 col-lg-6" id="barChart">
                       </div>
                   </div>
-               	        <p class="col-xs-10 col-sm-10 col-md-12 sourcePie" >(Source: Hurun: Immigration and the Chinese HNWI 2014)</p>
+               	        <p class="col-xs-10 col-sm-12 col-md-12 sourcePie" >(Source: Hurun: Immigration and the Chinese HNWI 2014)</p>
 
 
               <div class=" row">
@@ -465,16 +469,18 @@
                </div>
 
 
-          
-                <div id="footer">
-                  <img id="me" src="img/han.jpg" >
-                    <div id="meText">
-            	         <p> Email: <a href="mailto:jashcny@gmail.com">jashcny@gmail.com</a></p>
-            	          <p><a href="http://hanhuang.me">Personal Website</a></p>
-            	           <p>Instructors</p>
-            	            <p>Rich Beckman | Alberto Cairo</p>
-                    </div>
-                </div>
+               <hr>
+               <div class="row footer">
+                 <div class="col-xs-10 col-sm-10 col-md-6 col-lg-6">
+                 <img id="me" src="img/han.jpg" >
+                 </div>
+                 <div class="col-xs-10 col-sm-10 col-md-6 col-lg-6">
+                   <p> Email: <a href="mailto:jashcny@gmail.com">jashcny@gmail.com</a></p>
+                    <p><a href="http://hanhuang.me">Personal Website</a></p>
+                     <p>Instructors</p>
+                      <p>Rich Beckman | Alberto Cairo</p>
+                 </div>
+               </div>
 
                 <!-- <script>
             		// jquery sorting applied to it - could be done with d3 and events.
