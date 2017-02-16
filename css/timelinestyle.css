@@ -108,7 +108,7 @@ Main Components
   bottom: 0;
   z-index: 2;
   text-align: center;
-  font-size: 1.3rem;
+  font-size: 1.9rem;
   padding-bottom: 15px;
   color: #383838;
   /* fix bug on Safari - text flickering while timeline translates */
@@ -294,7 +294,7 @@ Main Components
 }
 @media only screen and (min-width: 768px) {
   .cd-horizontal-timeline .events-content h2 {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     margin-bottom: 5%;
     color:black;
   }
@@ -302,7 +302,7 @@ Main Components
     font-size: 2rem;
   }
   .cd-horizontal-timeline .events-content p {
-    font-size: 1.1rem;
+    font-size: 1.8rem;
   }
 }
 

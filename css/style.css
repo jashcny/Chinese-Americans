@@ -77,6 +77,11 @@ margin-left: 2%;
   .sidenav a {font-size: 18px;}
 }
 
+
+
+
+
+
 /*This is the first navigation*/
 
 
@@ -106,6 +111,7 @@ margin-left: 2%;
 .open-nav {
   max-height: 400px !important;
 }
+
 .open-nav .mobile-toggle {
   transform: rotate(-90deg);
   -webkit-transform: rotate(-90deg);
@@ -217,6 +223,7 @@ nav ul a {
 * {
   box-sizing: border-box;
 }
+
 /*nav. finished*/
 
 
@@ -239,7 +246,6 @@ font-family: 'Slabo 27px', serif;
 #subHeading{
   margin-left: 6%;
   font-size: 130%;
-  margin-top: -30px;
   margin-bottom: 15%;
   text-transform: uppercase;
   font-family: 'Roboto', sans-serif;
@@ -267,10 +273,6 @@ h1 {
 }
 
 
-
-.content {
-  padding: 50px 2% 250px;
-}
 
 .hero {
   position: relative;
@@ -309,14 +311,21 @@ max-width: 1500px;
 
 }
 
+
+
+
+/*.rowMap {
+  margin-left: 45px;
+}*/
+
+
  p {
   margin-bottom: 20px;
-  font-size: 17px;
+  font-size: 1.8rem;
   line-height: 2;
   color:black;
   max-width: 250%;
-  margin-left: -10%;
-  text-align: justify;
+  text-align: left;
 }
 
 
@@ -387,6 +396,7 @@ section {
   }
 }
 
+ /**/
 
 
 #combine {
@@ -410,80 +420,23 @@ position: absolute;
   padding-bottom: 10px;
 }*/
 
-.pieLegend{
+.pieLegend {
   margin-left: 0%;
-  margin-top: -26%;
+  margin-top: -44%;
   display: block;
-  position: absolute;
-}
-
-#pie{
-  margin-top: 1%;
-  position: absolute;
-}
-
-#pieBar  {
-  display: inline-block;
-  margin-top: -1%;
-  padding-left: 2%;
-  margin-left: -10%;
-
-}
-
-
-#barChart{
- margin-left: 78%;
-  margin-top: 3.3%;
-  display: inline-block;
-  position: relative;
-
-}
-
-
-
-#pieBarText {
-
-  max-width: 100%;
-}
-
-/*#combineText {
-max-width: 100%;
-margin-left: 1.5%;
-margin-top: 6%;
-}
-
-#combineText2 {
-max-width: 27%;
-margin-left: 1.5%;
-
-}
-
-#combineText3 {
-max-width: 60%;
-margin-left: 1.5%;
-
-}*/
-
-
-
-
-#stateMap {
-  margin-left: 12%;
-  margin-top: -50%;
 }
 
 #buttons {
   margin-left: 400px;
-  margin-top: -40%;
+  margin-bottom: 100px;
 }
-
-
 
 
 #stateMap path {
   stroke: #2C7873;
   stroke-width: 0.6px;
 }
+
 .axis path,
 .axis line {
   fill: none;
@@ -507,13 +460,21 @@ margin-left: 1.5%;
 }
 
 #lineSource {
-  margin-top: -1%;
-  margin-bottom: 10%;
-  margin-left: -4%;
+  margin-bottom: 5%;
+  margin-left: -10%;
+  text-align: left;
+}
+
+#CT1Source {
+  margin-left: 6%;
 }
 
 #lineChart {
   margin-left: -7%;
+}
+
+.head2 {
+  padding: 3% 2%;
 }
 
 #focused {
@@ -523,6 +484,9 @@ margin-left: 1.5%;
     font-weight: bold;
   }
 
+.label2,.label3 {
+  font-size: 20px;
+}
 
   .grid .tick {
       opacity: 0.7;
@@ -537,8 +501,8 @@ margin-left: 1.5%;
 
 #info {
     position: absolute;
-    margin-left: 90%;
-    margin-top: 380px;
+    margin-left: 82%;
+    margin-top: 250px;
 }
 
 #info p{
@@ -565,7 +529,6 @@ color:grey;
   line-height: 1.4em;
   border: rgb(210,210,210) 1px solid;
   padding-left: 5%;
-
   padding-top: 5%;
   padding-bottom: 5%;
 }
@@ -580,14 +543,22 @@ color:grey;
 
 }
 
-.mytooltip3,.mytooltip6 p {
+.mytooltip3 p {
   font-size: 15px;
   font-family: 'Raleway', sans-serif;
   background-color: rgba(255,255,255,0.8);
   line-height: 1.4em;
   border: rgb(210,210,210) 1px solid;
-    padding: 2.5%;
+  padding: 2.5%;
+}
 
+.mytooltip6 p {
+  font-size: 15px;
+  font-family: 'Raleway', sans-serif;
+  background-color: rgba(255,255,255,0.8);
+  line-height: 1.4em;
+  border: rgb(210,210,210) 1px solid;
+  padding: 2.5%;
 }
 
 
@@ -615,7 +586,9 @@ color:grey;
   fill: #fff;
 }
 
-
+.legendColors{
+  font-size: 27px;
+}
 
 .graticule {
   fill: none;
@@ -642,7 +615,15 @@ margin-left: 600px;
 width: 600px;
 }
 
+.headPec {
+  padding-top: 5%;
+}
 
+.tableSource {
+  margin-left: 5%;
+  padding-top: 1%;
+  padding-bottom: 5%;
+}
 
 .bar rect {
         fill:  #99CCFF;
@@ -692,18 +673,16 @@ width: 600px;
   fill: #99CCFF;
 }
 
-#multipleSource{
-  margin-left: -13%;
-}
+
 
 #button-wrap {
   min-width: 20%;
   height: 4%;
-  padding-top:15%;
-  margin-left: 19%;
+  /*padding-top:13%;*/
+  /*margin-left: 19%;
   margin-right: auto;
-  margin-bottom: 10%;
-    font-family: "Cardo", serif;
+  margin-bottom: 10%;*/
+  font-family: "Cardo", serif;
 }
 
 .button {
@@ -714,8 +693,8 @@ width: 600px;
   background: #fcfcfc;
   border: 1px solid #cecece;
   display: block;
-  padding: 2% 3%;
-    font-size: 120%;
+  padding: 2% 2%;
+  font-size: 120%;
   border-radius: 5px 5px 5px 5px;
   color:black;
 }
@@ -760,10 +739,20 @@ width: 600px;
   opacity: 0.0;
 }
 
+.mulSource {
+margin-left: 2%;
+margin-top: 2%;
+margin-bottom: 5%;
+}
+
+#tableSource{
+  margin-left: 0;
+
+}
 
 
 /*table1*/
-#populationGroup{
+/*#populationGroup{
 display: inline-block;
 }
 
@@ -771,7 +760,7 @@ display: inline-block;
 display: inline-block;
 margin-top: -27%;
 margin-left: 10%;
-}
+}*/
 
 
 /*#stateMapgroup h2{
@@ -780,13 +769,22 @@ margin-left: 10%;
 }*/
 
 
-#table1 {
-  margin-left: -10%;
-  margin-top: 40px;
+/*#rowMap {
+margin-left: 0px;
+}*/
+/*#rowMap {
+  margin-left: 0;
+}*/
+
+@media screen and (max-height: 992px) {
+  .rowMap {
+    margin-left: 3.5%;
+  }
 }
 
-#table1 th {
 
+
+#table1 th {
 padding-right: 14px;
 text-align: left;
 font-size: 16px;
@@ -809,53 +807,33 @@ border-bottom: 0.7px solid #ddd;
 
 tr:nth-child(even) {background-color: rgb(223,236,221)	}
 
-/*VIsa Image*/
-/*.img1,.img2,.img3,.img4,.img5,.img6,.img7,.img8{
-  display: inline-block;
-  padding-right: 130px;
-  vertical-align:middle;
-}
 
-.img1{
-  height:30%;
-  width:30%;
-}
-
-.img2{
-  height:32%;
-  width:32%;
-}
-
-.img3{
-  height:22%;
-  width:22%;
-}
-.img4,.img5,.img6,.img7,.img8{
-  width:24%;
-  height:24%;
-}
-
-#visagroup {
-text-align: center;
-margin-left: -160px;
-}*/
-#visagroup{
-    display: inline-block;
-    margin-left: -80px;
-    padding: 0px;
-    position: relative;
-    top: 30px;
-    margin-bottom: 8%;
-
-}
 .visaSvg1,.visaSvg2,.visaSvg3,.visaSvg4,.visaSvg5,.visaSvg6,.visaSvg7,.visaSvg8 {
 display: block;
 width: 150px;
 height: 150px;
-margin-left: 24%;
-margin-bottom: 5%;
-margin-right: 2%;
-background-size:100%;
+}
+
+
+.rowPic {
+  margin-left: 3%;
+  margin-top: 3%;
+}
+
+.rowPic p{
+  line-height: 1.6;
+  max-width: none;
+}
+
+@media screen and (max-height: 750px) {
+  .rowPic p{
+    margin-left: 10px;
+  }
+}
+
+
+.visaTitle{
+  font-weight: bold;
 }
 
 .visaSvg1{
@@ -892,167 +870,9 @@ background-size:100%;
   background: url(../img/help.svg) no-repeat;
 }
 
-.visaTextGroup {
-  margin-top: 2%;
-  margin-left: -32%;
-  max-width: 140%;
-  min-width:5%;
-display: inline-block;
-
+.visaSvg1{
+  margin-top: 20px;
 }
-
-#visa1,#visa2,#visa3,#visa4,#visa5,#visa6,#visa7,#visa8{
-  display: inline-block;
-}
-
-#head1 {
-  margin-top: -1%;
-  font-weight: bold;
-}
-
-#moneytext{
-  margin-top: -1.5%;
-}
-
-#head2 {
-  margin-top: 1.5%;
-  font-weight: bold;
-}
-
-.visaTextGroup a{
-float:left;
-
-}
-
-
-#marriagetext{
-margin-top: -1.5%;
-
-}
-
-#head3 {
-  margin-top: -1.2%;
-  font-weight: bold;
-}
-
-#studytext{
-margin-top: -1.2%;
-}
-
-#head4 {
-  font-weight: bold;
-  margin-top: .5%;
-}
-
-#talenttext{
-  margin-top: -1.5%;
-}
-
-#head5 {
-  font-weight: bold;
-  margin-top: -1%;
-}
-
-#passporttext{
-  margin-top: -1.5%;
-}
-
-#head6 {
-  font-weight: bold;
-  margin-top: 0.5%;
-}
-
-#babytext  {
-  margin-top: -1%;
-}
-
-#head7 {
-font-weight: bold;
-margin-top: 1.5%;
-}
-
-#internationtext{
-margin-top: -1%;
-}
-
-#head8 {
-font-weight: bold;
-margin-top: 0.5%;
-}
-
-#asylumtext {
-  margin-top: -1.5%;
-}
-
-/*#marriageGroup,#studyGroup,#talentGroup,#internationGroup,#passportGroup,#asylumGroup,#babyGroup {
-  display: inline-block;
-}*/
-/*#marriagetext,#studytext,#talenttext,#internationtext,#asylumtext,#babytext {
-  margin-top: -180px;
-}
-#passporttext{
-  margin-top: -200px;
-}
-#studyGroup,#talentGroup,#talentGroup,#internationGroup,#passportGroup,#asylumGroup,#babyGroup {
-margin-top: 50px;
-}*/
-
-
-/*.img3,.img4{
-    display: inline;
-    margin-right: 130px;
-    padding-right: 60px;
-    padding-bottom: 90px;
-    vertical-align:middle;
-    width:150px;
-}
-
-.img5,.img6{
-    display: inline;
-    margin-right: 130px;
-    padding-right: 60px;
-    padding-bottom: 100px;
-    vertical-align:middle;
-    width:170px;
-}
-
-.img7{
-    display: inline;
-    margin-right: 120px;
-    padding-right: 60px;
-    padding-bottom: 120px;
-    vertical-align:middle;
-    width:190px;
-}
-.img8{
-    display: inline;
-    margin-right: 130px;
-    padding-right: 60px;
-    padding-bottom: 100px;
-    vertical-align:middle;
-    width:180px;
-}
-
-.img1 {
-    display: inline;
-    margin-right: 110px;
-    padding-right: 60px;
-    padding-bottom: 60px;
-
-    vertical-align:middle;
-    width:185px;
-  }
-
-  .img2 {
-  display: inline;
-  margin-right: 110px;
-  padding-right: 60px;
-  padding-top: 60px;
-  padding-bottom: 130px;
-  vertical-align:middle;
-  width:215px;
-}*/
-
 
 /*Sankey Chart*/
 .node rect {
@@ -1074,24 +894,15 @@ margin-top: 50px;
 .link:hover {
   stroke-opacity: .9;
 }
-#send {
-  margin-bottom: 90px;
-}
+
 #textgroup{
   display: inline-block;
 }
 
-#received{
-  margin-top: -10%;
-  margin-bottom: 10%;
-  min-width: 1370px;
-  padding-left: 83%;
+#SankeyRemittance {
+  margin-left: -10%;
 }
 
-#SankeyRemittance{
-  margin-top: -120px;
-  margin-left: -9%;
-}
 
 #remittanceIntro {
   margin-top: 5%;
@@ -1108,9 +919,22 @@ margin-top: 50px;
   margin-left: 50px;
 }
 
-#pieSource{
+.cirbar{
   margin-left: -10%;
-  margin-top: 4%;
+}
+
+.cirbar2{
+  margin-left: 3%;
+}
+
+.sourcePie {
+  margin-left: 5%;
+  margin-top: -7%;
+  margin-bottom: 7%;
+}
+
+.headHur {
+  margin-top: 10%;
 }
 
 hr {
@@ -1148,4 +972,14 @@ max-width: 40%;
 
 #footer a{
   color: black;
+}
+
+.reimRow {
+  margin-left: 3%;
+}
+
+.remitSource {
+  margin-top: 2%;
+  margin-left: -10%;
+  margin-bottom: 8%;
 }

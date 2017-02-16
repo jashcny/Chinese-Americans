@@ -1,6 +1,9 @@
 function piechart(data) {
-var m = 25,
+var m = 35,
     r = 100;
+
+var fullWidth = (r+m) * 4;
+var fullHeight = (r+m) * 4;
 
 var color = d3.scale.ordinal()
             .range(["rgba(214,230,244,0.8)","rgba(141,190,218,0.8)","rgba(53,126,186,0.8)","rgba(11,61,138,0.8)"]);
@@ -21,14 +24,12 @@ var labelArc = d3.svg.arc()
     .outerRadius(r+5)
     .innerRadius(r+5);
 
-
-
   // Insert an svg element (with margin) for each airport in our dataset. A
   // child g element translates the origin to the pie center.
-  var svg = d3.select("#pie")
+var svg = d3.select("#pie")
       .append("svg")
-      .attr("width", (r + m) * 3.5)
-      .attr("height", (r + m) * 3.1)
+      .attr("viewBox", "0 0 " + fullWidth + " " + fullHeight)
+      .attr("preserveAspectRatio", "xMinYMin slice")
       .append("g")
       .attr("transform", "translate(" + (r + m) + "," + (r + m) + ")");
 
@@ -43,18 +44,24 @@ var g = svg.selectAll(".arc")
 
 
          // Add a colored arc path, with a mouseover showing the number.
-         g.append("path")
-             .attr("d", arc)
-             .style("fill", function(d) { return color(d.data.degree); });
+g.append("path")
+.attr("d", arc)
+.style("fill", function(d) { return color(d.data.degree); });
             //  .on("mouseover", mouseover1)
             //  .on("mousemove", mousemove1)
             //  .on("mouseout", mouseout1);
-    g.append("text")
-        .attr("transform", function(d) { return "translate(" + labelArc.centroid(d) + ")"; })
-        .attr("dy", ".35em")
-        .attr("font-size",20)
-        .style("text-anchor","middle")
-        .text(function(d) { return d.data.number+"%"; });
+
+var pos = d3.svg.arc().innerRadius(r + 20).outerRadius(r + 20);
+
+g.append("text")
+.attr("transform", function(d) { return "translate(" +
+ pos.centroid(d) + ")"; })
+ .attr("dy", ".35em")
+ .attr("font-size",17)
+ .style("text-anchor","middle")
+ .text(function(d) { return d.data.number+"%"; });
+
+
 
 var degreeType = ["No More than High school","Doctor Degree","Master Degree","Bachelor Degree"];
 
@@ -69,8 +76,12 @@ var legend = d3.select("#pie").append("svg")
                .enter().append("g")
                .attr("transform", function(d,i) {
                xOff = (i % 2) * 150
-               yOff = Math.floor(i  / 2) * 41
-               return "translate(" + xOff + "," + yOff + ")"});
+               yOff = Math.floor(i  / 2) * 38
+               return "translate(" + xOff/1.3 + "," + yOff/1.3 + ")"});
+
+d3.select(window).on('resize', resize);
+      function resize() {
+      }
 
 legend.append("rect")
      .attr("width", 18)
@@ -80,13 +91,9 @@ legend.append("rect")
 legend.append("text")
      .attr("x", 24)
      .attr("y", 9)
-     .attr("dy", ".35em")
-     .attr("font-size","15px")
+     .attr("dy", ".15em")
+     .attr("font-size","12px")
      .text(function(d) { return d; });
-
-
-
-
   //
   // function mouseover1(d) {
   //

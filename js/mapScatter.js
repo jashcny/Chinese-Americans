@@ -13,17 +13,17 @@ function stateMap(us,states){
 
     var color = d3.scale.linear()
     .domain(["0.15", "3.5"])
-    .range(["#ffffff","#258039"]).interpolate(d3.interpolateLab);
-    var ratio = 500/960;
+    .range(["rgb(215,233,212	)","#258039"]).interpolate(d3.interpolateLab);
+    var ratio = 450/960;
 
-        var width = 880;
-        var height =530;
+    var width = 865;
+    var height =550;
 
 
 
     var projection = d3.geo.albersUsa()
                        .translate([width/2, height/2])    // translate to center of screen
-                       .scale([700]);          // scale things down so see entire US
+                       .scale([800]);          // scale things down so see entire US
 
     var numberFormat=d3.format(",");
     var path = d3.geo.path()
@@ -31,8 +31,8 @@ function stateMap(us,states){
 
     var svg = d3.select("#stateMap")
                 .append("svg")
-                .attr("width", width )
-                .attr("height", height);
+                .attr("viewBox", "0 0 " + width + " " + height )
+                .attr("preserveAspectRatio", "xMinYMin slice");
 
     var tooltip2 = d3.select("body")
                       .append("div")
@@ -41,7 +41,27 @@ function stateMap(us,states){
     var tooltip3 = d3.select("body")
                             .append("div")
                             .attr("class", "mytooltip3");
-                            				var allPercentage = [];
+
+  	// var allNumbers = [];
+    //
+    //   states.forEach(function(d, i){
+    //     // now we add another data object value, a calculated value.
+    //   d.PopulationRaw= (d.Population)*1000;
+    //   d.totalPopulationRaw= (d.totalPopulation)*1000;
+    //
+    //   allNumbers.push(d.PopulationRaw);
+    //   allNumbers.push(d.PopulationRaw);
+    //
+    //           //
+    //           //
+    //   				// allPercentage.push(d.Percentage);
+    //           //
+    //           //
+    //           // allPercentage.sort(function(a, b) {
+    //           //   return d3.ascending(+a.Percentage, +b.Percentage);
+    //           // });
+    //           // console.log(allPercentage);
+    // });
 
   //   states.forEach(function(d, i){
   //     // now we add another data object value, a calculated value.
@@ -61,11 +81,13 @@ function stateMap(us,states){
 		  console.log(states);
 
 states.forEach(function(state){
-  var dataPro = state.State;
+      var dataPro = state.State;
       var dataValue = +state.Percentage;
 			console.log(dataValue);
       var population = +state.Population;
       var TotalP = +state.totalPopulation;
+      var rawPop = (state.Population)*1000;
+      var rawTotal = (state.totalPopulation)*1000;
 
       us.features.forEach(function(j){
       var usState = j.properties.name;
@@ -74,6 +96,8 @@ states.forEach(function(state){
           j.properties.Rate = dataValue;
           j.properties.Population = population;
           j.properties.totalPopulation = TotalP;
+          j.properties.rawPopulation = rawPop;
+          j.properties.rawtotalPopulation = rawTotal;
           }
       });
 
@@ -84,17 +108,17 @@ states.forEach(function(state){
     //
       var pop = d3.extent(chineseAmericandata, function(d) {return +d.properties.Population});
       var TotalP = d3.extent(chineseAmericandata, function(d) {return +d.properties.totalPopulation});
-      var dotRadius = 6;
-      // setup x
-      var xScale = d3.scale.linear().range([100, width - 260]).domain(pop), // value -> display
+      var dotRadius = 9;
+      // setup x;
+      var xScale = d3.scale.linear().range([100, width - 160]).domain(pop), // value -> display
           xAxis = d3.svg.axis()
-      .scale(xScale)
-      .ticks(10)
-      .orient("bottom")
-      .outerTickSize([0]);
+                    .scale(xScale)
+                    .ticks(8)
+                    .orient("bottom")
+                    .outerTickSize([0]);
     //
       // setup y
-      var yScale = d3.scale.linear().range([height-100, 15]).domain(TotalP), // value -> display
+      var yScale = d3.scale.linear().range([height-50, 35]).domain(TotalP), // value -> display
           yAxis = d3.svg.axis()
                     .scale(yScale)
                     .orient("left")
@@ -118,7 +142,7 @@ states.forEach(function(state){
 				.attr("cy", function(d) {
 					return yScale(+d.properties.totalPopulation);
 				})
-        .attr("transform", "translate(110, 0)")
+        .attr("transform", "translate(110, -10)")
 				.attr("class", "dotGroups");
     //
     //
@@ -126,39 +150,52 @@ states.forEach(function(state){
     //
      var x_axis_g = svg.append("g")
           .attr("class", "x axis")
-          .attr("transform", "translate(110, 430 )")
-          .call(xAxis).style('opacity', 0);
+          .attr("font-size","20px")
+          .attr("transform", "translate(110, 500 )")
+          .call(xAxis)
+          .style('opacity', 0);
     //
       x_axis_g.append("text")
-          .attr("class", "label")
-          .attr("x", width-280)
+          .attr("class", "label2")
+          .attr("x", width-120)
           .attr("y", -16)
           .style("text-anchor", "end")
-          .text("Population");
+          .text("Population(1,000 people)");
     //
     //   // y-axis
       var y_axis_g = svg.append("g")
           .attr("class", "y axis")
+          .attr("font-size","20px")
           .attr("transform", "translate(210, 0 )")
           .call(yAxis)
           .style('opacity', 0);
     //
       y_axis_g.append("text")
-          .attr("class", "label")
+          .attr("class", "label3")
           .attr("transform", "rotate(-90)")
           .attr("y", 12)
           .attr("dy", ".71em")
-          .attr("dx","-1.5em")
+          .attr("dx","-.5em")
           .style("text-anchor", "end")
           .text("Total Population");
+
+      y_axis_g.append("text")
+          .attr("class", "label3")
+          .attr("transform", "rotate(-90)")
+          .attr("y", 36)
+          .attr("dy", ".71em")
+          .attr("dx","-1.5em")
+          .style("text-anchor", "end")
+          .text("(1,000 people)");
     //
     var g = svg.append("g");
 
     var default_size = function(d, i) { return 150; };
-     var exploder = d3.geo.exploder()
+
+    var exploder = d3.geo.exploder()
                      .projection(projection)
                      .size(default_size)
-                     .position(function(d,i){ return [800, height/2]});
+                     .position(function(d,i){ return [780, height/2]});
 
     // Here is the magic!
     // This exploder will create a grid of the states
@@ -167,33 +204,35 @@ states.forEach(function(state){
 
 		svg.append("g")
 		  .attr("class", "legendColors")
-		  .attr("transform", "translate(480, 38)");
+		  .attr("transform", "translate(480, 8)");
 
 		var legendColors = d3.legend.color()
-		  .shapeWidth(41)
-      .cells(6)
-      .labels(["<0.15%", "0.7%", "1.3%","1.9%", "2.4%",">3.0%"])
+		  .shapeWidth(61)
+      .shapeHeight(20)
+      .cells(4)
+      .labels(["<0.15%", "0.7%", "1.3%",">3.0%"])
       // .labels(["<0.15%", "0.4%", "0.9%", "2%","4%", ">14.5%"])
       // .labels(["<0.15%", ">14.5%"])
 		  .orient("horizontal")
 		  .scale(color);
 
+
 		svg.select(".legendColors")
-		  .call(legendColors);
+		   .call(legendColors);
 
 
 
-          var explode_states = g.append("g")
-              .attr("id", "explode-states")
-              .selectAll("path")
-              .data(chineseAmericandata)
-              .enter().append("path")
-              .attr("d", path)
-               .style("fill", function(d) {
-                var value = d.properties.Rate;
-                if (value) return color(value); });
+    var explode_states = g.append("g")
+        .attr("id", "explode-states")
+        .selectAll("path")
+        .data(chineseAmericandata)
+        .enter().append("path")
+        .attr("d", path)
+         .style("fill", function(d) {
+          var value = d.properties.Rate;
+          if (value) return color(value); });
 
-      circles.style('opacity', 0);
+    circles.style('opacity', 0);
 
     function addButton(text, callback) {
         d3.select("#buttons").append('button')
@@ -204,7 +243,7 @@ states.forEach(function(state){
 
             // hide axis
 
-circles.style('opacity', 0);
+    circles.style('opacity', 0);
             x_axis_g.transition().duration(500).style('opacity', 0);
             y_axis_g.transition().duration(500).style('opacity', 0);
             // reset to default size
@@ -273,7 +312,6 @@ circles.style('opacity', 0);
             .attr("transform", "translate(0,0)")
             .each('end', function() {
                 d3.select(this).classed('highlighted-state', false)
-
             })
 
         d3.select(this)
@@ -283,6 +321,11 @@ circles.style('opacity', 0);
             .call(exploder);
 
 });
+
+        d3.select(window).on('resize', resize);
+
+        function resize() {
+        }
 
 
     explode_states.on('mouseover', function(){
@@ -322,7 +365,7 @@ circles.style('opacity', 0);
 
 
         d3.select("#info")
-            .html("<p><span style='color:#b35900;'>" + "State:"+" </span>"+ data.properties.name + "<br><span style='color:#b35900;'>Population: " +"</span>"+ numberFormat(+data.properties.Population)+"<br><span style='color:#b35900;'>Total Population: " +"</span>"+ numberFormat(+data.properties.totalPopulation) + "</p>");
+            .html("<p><span style='color:#b35900;'>" + "State:"+" </span>"+ data.properties.name + "<br><span style='color:#b35900;'>Population: " +"</span>"+ numberFormat(+data.properties.rawPopulation)+"<br><span style='color:#b35900;'>Total Population: " +"</span>"+ numberFormat(+data.properties.rawtotalPopulation) + "</p>");
 
         d3.selectAll('.highlighted-state')
             .transition()
@@ -347,7 +390,7 @@ circles.style('opacity', 0);
                     .attr("r", 15);
         tooltip3
             .style("display", null)
-            .html("<p> <span style='color:#b35900;'>" + "state:"+" </span>"+ data.properties.name + "<br><span style='color:#b35900;'>Population:" +"</span>"+ numberFormat(+data.properties.Population) +"<br><span style='color:#b35900;'>Total Population:" +"</span>"+ numberFormat(+data.properties.totalPopulation )+ "</p>");
+            .html("<p> <span style='color:#b35900;'>" + "state:"+" </span>"+ data.properties.name + "<br><span style='color:#b35900;'>Population:" +"</span>"+ numberFormat(+data.properties.rawPopulation) +"<br><span style='color:#b35900;'>Total Population:" +"</span>"+ numberFormat(+data.properties.rawtotalPopulation )+ "</p>");
         })
 
     .on('mousemove', function(){
@@ -362,7 +405,7 @@ circles.style('opacity', 0);
     .on('mouseout', function(){
       d3.select(this)
         .transition()
-        .attr("r", 6);
+        .attr("r", 9);
    tooltip3.style("display", "none");
    });
 }

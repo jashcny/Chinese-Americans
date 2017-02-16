@@ -12,9 +12,9 @@
 			//Set up date formatting and years
 			var dateFormat = d3.time.format("%Y");
 
-var dateFormat2 = d3.time.format("%Ys");
+      var dateFormat2 = d3.time.format("%Ys");
 
-var numberFormat=d3.format(",");
+      var numberFormat=d3.format(",");
 
 			//Set up scales
 			var xScale = d3.time.scale()
@@ -57,8 +57,8 @@ var numberFormat=d3.format(",");
 			//Create the empty SVG image
 			var svg = d3.select("#lineChart")
 						.append("svg")
-						.attr("width", fullwidth)
-						.attr("height", fullheight)
+						.attr("viewBox", "0 0 " + fullwidth + " " + fullheight)
+						.attr("preserveAspectRatio", "xMinYMin slice")
 						.append("g")
 						.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
@@ -166,6 +166,12 @@ var numberFormat=d3.format(",");
 						else {
 							return "#BFDCCF";}
 						});
+
+            d3.select(window).on('resize', resize);
+
+               function resize() {
+
+               }
 
 					groups.on("mouseover",HoverIn)
 								.on("mouseout",HoverOut);

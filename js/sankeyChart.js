@@ -296,6 +296,8 @@ function sankeyCharts(remittanceFlow){
 
 
   var margin = {top: 10, right: 80, bottom: 10, left: 180},
+      fullWidth = 970,
+      fullHeight = 440,
       width = 970 - margin.left - margin.right,
       height = 440 - margin.top - margin.bottom;
 
@@ -304,8 +306,8 @@ function sankeyCharts(remittanceFlow){
 
   // append the svg canvas to the page
   var svg = d3.select("#SankeyRemittance").append("svg")
-      .attr("width", width + margin.left + margin.right)
-      .attr("height", height + margin.top + margin.bottom)
+      .attr("viewBox", "0 0 " + fullWidth + " " + fullHeight)
+      .attr("preserveAspectRatio", "xMinYMin slice")
       .append("g")
       .attr("transform","translate(" + margin.left + "," + margin.top + ")");
 
@@ -384,6 +386,11 @@ function sankeyCharts(remittanceFlow){
         .attr("x",sankey.nodeWidth()-40)
         .attr("text-anchor", "end");
 
+    d3.select(window).on('resize', resize);
+
+    function resize() {
+
+    }
 
         // node.append("text")
         //     .attr("dx", function(d){if (d.name=="China"){return "-8em";}else{return "-9em";}})

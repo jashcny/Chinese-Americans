@@ -21,7 +21,7 @@ function ready(error, us, world, remittanceFlow,states, allPopulation, generalDe
   piechart(generalDegree);
   barChart(moveReasons);
   // worldMap(world,chineseRemittance);
-  top10Table(top10City);
+  // top10Table(top10City);
   sankeyCharts(remittanceFlow);
   // EB5(compareEB5);
   smallMultiples(visaMethod);

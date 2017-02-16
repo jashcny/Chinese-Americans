@@ -1,18 +1,18 @@
 function barChart(data){
 
-  var fullwidth = 820,
-      fullheight = 340;
+  var fullwidth = 980,
+      fullheight = 680;
 
-   var margin = {top: 20, right:40, bottom: 1, left: 190},
+   var margin = {top: 40, right:10, bottom: 1, left: 300},
       width = fullwidth - margin.right - margin.left;
       height = fullheight - margin.top - margin.bottom;
 
 			// Set up the range here - my output sizes for my bars - from 0 to width.
     var xScale = d3.scale.linear()
-        .range([0, width/2]);
+        .range([0, width/1.1]);
 
     var yScale = d3.scale.ordinal()
-        .rangeRoundBands([0, height], .03);
+        .rangeRoundBands([0, height], .009);
 
     var formatPercent = d3.format("%");
 
@@ -26,8 +26,8 @@ function barChart(data){
 
     var svg = d3.select("#barChart").append("svg")
           .attr("class", "barsvg")
-          .attr("width", width)
-          .attr("height", height)
+          .attr("viewBox", "0 0 " + fullwidth + " " + fullheight)
+          .attr("preserveAspectRatio", "xMinYMin slice")
           .append("g")
           .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
@@ -37,16 +37,16 @@ function barChart(data){
     svg.append("g")
         .attr("class", "y axis");
 
-				data.sort(function(a, b) {
-					return d3.descending(+a.number, +b.number); // make numeric
-				});
+		data.sort(function(a, b) {
+			return d3.descending(+a.number, +b.number); // make numeric
+		});
 
-				// set up the domain here, from the data i read in. I'm starting at 0, not min.
-        xScale.domain([ 0, d3.max(data, function(d) {
-    					return +d.number ;
-    				})]);
+		// set up the domain here, from the data i read in. I'm starting at 0, not min.
+    xScale.domain([ 0, d3.max(data, function(d) {
+					return +d.number ;
+				})]);
 
-        yScale.domain(data.map(function(d) { return d.reason; }));
+    yScale.domain(data.map(function(d) { return d.reason; }));
 
     var bar = svg.selectAll(".bar")
         .data(data,function(d) { return d.reason; }); // key function!
@@ -61,14 +61,15 @@ function barChart(data){
         .attr("width", function(d) {
  						return xScale(+d.number); // use your scale here:
  					})
-        .attr("height", yScale.rangeBand()/2);
+        .attr("height", yScale.rangeBand()/1.7);
 
         barCreate.append("text")
-            .attr("class", "label")
+            .attr("class", "label1")
             .attr("x", -3)
             .attr("y", yScale.rangeBand()/3)
             .attr("dy", "0.08em")
             .attr("text-anchor", "end")
+            .attr("font-size","27px")
             .text(function(d) { return d.reason; });
 
 
@@ -82,6 +83,12 @@ function barChart(data){
         //     .attr("dy", ".2em")
         //     .attr("text-anchor", "front")
         //     .text(function(d) { return formatPercent(d.number); });
+
+        d3.select(window).on('resize', resize);
+
+           function resize() {
+
+           }
 
         function make_x_axis() {
             return d3.svg.axis()
@@ -99,5 +106,6 @@ function barChart(data){
 
     svg.transition().select(".x.axis")
         .duration(1000)
+        .attr("font-size","27px")
         .call(xAxis);
 }
