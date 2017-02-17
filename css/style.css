@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto|Slabo+27px');
+@import url('https://fonts.googleapis.com/css?family=Eczar');
+
 #videoHeader {
   margin-left: 2%;
   font-weight: bold;
@@ -98,7 +100,7 @@ margin-left: 2%;
   opacity: 0;
   top: -100px;
   padding-bottom: 6px;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Eczar', serif;
 }
 
 @media only screen and (max-width: 766px) {
@@ -240,7 +242,7 @@ nav ul a {
   margin-top:5%;
   color:black;
 font-weight: bold;
-font-family: 'Slabo 27px', serif;
+font-family: 'Eczar', serif;
   text-transform:none;
   font-size: 400%
 
@@ -251,13 +253,13 @@ font-family: 'Slabo 27px', serif;
   font-size: 130%;
   margin-bottom: 15%;
   text-transform: uppercase;
-  font-family: 'Roboto', sans-serif;
-    color:#E1B16A;
+  font-family: 'Eczar', serif;
+  color:#E1B16A;
 }
 body {
   color: #8f8f8f;
   background: white;
-  font-family: "Cardo", serif;
+font-family: 'Eczar', serif;
   font-weight: 300;
   -webkit-font-smoothing: antialiased;
 }
@@ -288,7 +290,7 @@ h1 {
   padding-top: 110px;
   min-height: 500px;
   letter-spacing: 2px;
-  font-family: "Montserrat", sans-serif;
+font-family: 'Eczar', serif;
 }
 .hero h1 {
   font-size: 50px;
@@ -546,8 +548,8 @@ position: absolute;
 
 .mytooltip1 p {
   font-size: 15px;
-  height:20%;
-  font-family: 'Raleway', sans-serif;
+  width:110%;
+  font-family: 'Eczar', serif;
   background-color: rgba(255,255,255,0.8);
   line-height: 1.4em;
   border: rgb(210,210,210) 1px solid;
@@ -558,17 +560,17 @@ position: absolute;
 
 .mytooltip2 p {
   font-size: 15px;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Eczar', serif;
   background-color: rgba(255,255,255,0.8);
   line-height: 1.4em;
   border: rgb(210,210,210) 1px solid;
-    padding: 2.5%;
+  padding: 2.5%;
 
 }
 
 .mytooltip3 p {
   font-size: 15px;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Eczar', serif;
   background-color: rgba(255,255,255,0.8);
   line-height: 1.4em;
   border: rgb(210,210,210) 1px solid;
@@ -577,7 +579,7 @@ position: absolute;
 
 .mytooltip6 p {
   font-size: 15px;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Eczar', serif;
   background-color: rgba(255,255,255,0.8);
   line-height: 1.4em;
   border: rgb(210,210,210) 1px solid;
@@ -592,7 +594,7 @@ position: absolute;
 
 .mytooltip5 p {
   font-size: 13px;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Eczar', serif;
   background-color: rgba(255,255,255,0.8);
   line-height: 1.8em;
   border: rgb(210,210,210) 2px solid;
@@ -638,8 +640,6 @@ margin-left: 600px;
 width: 600px;
 }
 
-
-
 .headPec {
   padding-top: 5%;
 }
@@ -651,8 +651,8 @@ width: 600px;
 }
 
 .bar rect {
-        fill:  #99CCFF;
-      }
+  fill:  #99CCFF;
+}
 
 .bar rect:hover {
   fill:  rgba(11,61,138,0.8);
@@ -699,17 +699,16 @@ width: 600px;
 }
 
 
-
 #button-wrap {
   min-width: 20%;
   height: 4%;
-  margin-left: 19%;
+  margin-left: 22%;
   padding-top:3%;
   margin-top: 2%;
   /*margin-left: 19%;
   margin-right: auto;
   margin-bottom: 10%;*/
-  font-family: "Cardo", serif;
+  font-family: 'Eczar', serif;
 }
 
 .button {
